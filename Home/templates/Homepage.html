@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Automation</title>
+</head>
+<body>
+{% for appli in Appliances %}
+    <div>
+	{{appli.Name}}
+        <form id="{{ appli.Name }}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="appliance" value="{{ appli.Name }}">
+            {% if appli.state == 'ON' %}
+            <input type="checkbox" checked name="state" value="off" onchange="document.getElementById('{{ appli.Name }}').submit()">
+            {% else %}
+            <input type="checkbox" name="state" value="on" onchange="document.getElementById('{{ appli.Name }}').submit()">
+            {% endif %}
+        </form>
+    </div>
+{% endfor %}<br/><br/>
+
+
+</body>
+</html>

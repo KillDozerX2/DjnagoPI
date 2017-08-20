@@ -1,0 +1,17 @@
+7 - Tv
+11 - Settopbox
+13 - Fishlight
+12 - Fishpumpone
+15 - Fishpumptwo
+16 - Speakers
+
+
+nrf24 module:
+
+Vcc - 3.3V - 1
+GND - GND - 6
+CSN - GPIO 8 - 24
+CE - GPIO 17 - 11
+MOSI - GPIO 10 - 19
+MISO - GPIO 9 - 21
+SCK - GPIO 11 - 23
